@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <div class="switchLight">
+            Light
+            <div class="switchArea" onclick="switchLight()">
+                <div class="switchCircle"></div>
+            </div>
+            Dark
+        </div>
+
+    </header>
+    <h1 class="clima">Clima</h1>
+
+    <form class="busca">
+        <div class="sist_unidade">
+        Escolha o sistema de unidades:</br>
+                <input type="radio" id="metric" name="unit" value="metric" checked>
+                <label for="metric"> Métrico</label><br>
+
+                <input type="radio" id="imperial" name="unit" value="imperial">
+                <label for="imperial"> Imperial</label><br>
+        </div>
+        <div class="cidade">
+            Insira o nome de uma cidade:
+            <input type="search" id="searchInput" placeholder="Ex: Caxias do Sul" />
+        <button>Buscar</button>
+        </div>
+    </form>
+
+    <div class="resultado">
+        <div class="titulo">--</div>
+
+        <div class="info">
+            <div class="temp">
+                <div class="tempTitulo">Temperatura</div>
+                <div class="tempInfo">-- <sup>ºC</sup></div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" />
+            </div>
+            <div class="vento">
+                <div class="ventoTitulo">Vento</div>
+                <div class="ventoInfo">-- <span>km/h</span></div>
+                <div class="ventoArea">
+                    <div class="ventoPonto" style="transform: rotate(0deg)"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="aviso"></div>
+
+    <footer>Criado por Gabriel Melo Valmarath</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
